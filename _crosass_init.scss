@@ -1,0 +1,98 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.0
+// Date:    23.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// IMPORT global variables
+@import 'lib/global';
+
+
+// IMPORT functions
+@import 'lib/functions';
+
+
+// clear:both
+@mixin clear{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+
+
+// Crossbrowser box-sizing: border-box
+@mixin border_box{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+
+
+// Mixin for crossbrowser border-radius
+@mixin border_radius($color, $width, $size){
+  border-radius: $size;
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  -khtml-border-radius: $size;
+  border: $width solid $color;
+}
+
+
+// Font-size convertion px & em
+@mixin font_size($size){
+  font-size: $size+px;
+  font-size: $size / 16+em;
+}
+
+
+// Crossbrowser opacity
+// $value =>  0-100
+@mixin opacity($value){
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+  filter: alpha(opacity=#{$value}); // IE 5+
+  opacity: $value * 0.01;
+}
+
+
+
+// IMPORT: CSS Transitions
+@import 'lib/transitions';
+
+
+
+
+
+
+// Transform crossbrowser
+// $function - 2D or 3D transformation to an element
+@mixin transform($function){
+  -webkit-transform: #{$function};
+  -moz-transform: #{$function};
+  -o-transform: #{$function};
+  -ms-transform: #{$function};
+  transform: #{$function};
+}
+
+
+// Converions
+
+
+
+
+
+
+
+@function pxem($px, $base:$font-size-base){
+  @return parseInt($px / $base)+em;
+}
+
+@function empx($em, $base:$font-size-base){
+  @return parseInt($em * $base)+px;
+}
