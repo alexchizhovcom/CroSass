@@ -1,0 +1,27 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// Crossbrowser opacity
+// $value =>  0-100
+@mixin opacity($value){
+  $value : removeUnits($value);
+
+  // Prevent possible errors
+  @if $value > 100 {
+    $value : 100;
+  }
+  @else if $value < 0 {
+    $value : 0;
+  }
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+  filter: alpha(opacity=#{$value}); // IE 5+
+  opacity: $value / 100;
+}

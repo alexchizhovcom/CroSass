@@ -1,0 +1,19 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// Transform crossbrowser
+// $function - 2D or 3D transformation to an element
+@mixin transform($function){
+  -webkit-transform: #{$function};
+  -moz-transform: #{$function};
+  -o-transform: #{$function};
+  -ms-transform: #{$function};
+  transform: #{$function};
+}

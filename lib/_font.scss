@@ -1,0 +1,16 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// Font-size convertion px & em
+@mixin font-size($size){
+  $size: removeUnits($size);
+  font-size: #{$size}px;
+  font-size: pxtoem($size);
+}

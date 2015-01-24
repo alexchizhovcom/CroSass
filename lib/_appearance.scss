@@ -1,0 +1,19 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+
+// appearance
+// http://www.w3schools.com/cssref/css3_pr_appearance.asp
+@mixin appearance($value){
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  -o-appearance: $value;
+  appearance: $value;
+}

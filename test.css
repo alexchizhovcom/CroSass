@@ -1,0 +1,52 @@
+/* line 47, test.scss */
+.pixelstoems {
+  font-size: 1.5625em;
+}
+
+/* line 51, test.scss */
+.fontsize {
+  font-size: 15px;
+  font-size: 0.9375em;
+}
+
+/* line 55, test.scss */
+.clearafter {
+  color: red;
+  width: 100px;
+  position: relative;
+}
+/* line 13, lib/_clear.scss */
+.clearafter:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* line 62, test.scss */
+.clearbefore {
+  color: blue;
+  width: 200px;
+  position: relative;
+}
+/* line 22, lib/_clear.scss */
+.clearbefore:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* line 69, test.scss */
+.opacity {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+/* line 73, test.scss */
+.transform {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}

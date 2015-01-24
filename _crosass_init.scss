@@ -1,8 +1,8 @@
 // ###############################################
 // CroSass - SASS Crossbrowser Library
 // Author:  Alex Chizhov
-// Verison: 0.1.0
-// Date:    23.01.2015
+// Verison: 0.1.2
+// Date:    24.01.2015
 // GitHub:  https://github.com/alexchizhovcom/CroSass
 // Website: http://alexchizhov.com
 // ###############################################
@@ -16,83 +16,44 @@
 @import 'lib/functions';
 
 
-// clear:both
-@mixin clear{
-  display: block;
-  content: '';
-  clear: both;
-}
+// IMPORT CSS Reset
+@import 'lib/reset';
 
 
+// IMPORT Animation
+@import 'lib/animation';
 
-// Crossbrowser box-sizing: border-box
-@mixin border_box{
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+// IMPORT : Appearance
+@import 'lib/appearance';
 
-
-
-
-// Mixin for crossbrowser border-radius
-@mixin border_radius($color, $width, $size){
-  border-radius: $size;
-  -webkit-border-radius: $size;
-  -moz-border-radius: $size;
-  -khtml-border-radius: $size;
-  border: $width solid $color;
-}
+// IMPORT : Background
+@import 'lib/background';
 
 
-// Font-size convertion px & em
-@mixin font_size($size){
-  font-size: $size+px;
-  font-size: $size / 16+em;
-}
+// IMPORT : Border-radius
+@import 'lib/borderradius';
+
+// IMPORT : Box-sizing
+@import 'lib/boxsizing';
+
+// IMPORT : Box-shadow
+@import 'lib/boxshadow';
+
+// IMPORT : Font-size
+@import 'lib/font';
 
 
-// Crossbrowser opacity
-// $value =>  0-100
-@mixin opacity($value){
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
-  filter: alpha(opacity=#{$value}); // IE 5+
-  opacity: $value * 0.01;
-}
+// IMPORT : Opacity
+@import 'lib/opacity';
 
 
-
-// IMPORT: CSS Transitions
+// IMPORT: Transitions
 @import 'lib/transitions';
 
+// IMPORT : Transform
+@import 'lib/transform';
 
 
 
-
-
-// Transform crossbrowser
-// $function - 2D or 3D transformation to an element
-@mixin transform($function){
-  -webkit-transform: #{$function};
-  -moz-transform: #{$function};
-  -o-transform: #{$function};
-  -ms-transform: #{$function};
-  transform: #{$function};
-}
-
-
-// Converions
-
-
-
-
-
-
-
-@function pxem($px, $base:$font-size-base){
-  @return parseInt($px / $base)+em;
-}
-
-@function empx($em, $base:$font-size-base){
-  @return parseInt($em * $base)+px;
-}
+// IMPORT: Clear
+@import 'lib/clear';

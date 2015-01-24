@@ -1,0 +1,57 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// http://www.w3.org/TR/css3-background/#the-border-radius
+
+
+
+// border-radius
+@mixin border-radius($top_left : $default-border-radius-top-left, $top_right : $default-border-radius-top-right, $bottom_left : $default-border-radius-bottom-left, $bottom_right : $default-border-radius-bottom-right){
+  -webkit-border-radius: $top_left $top_right $bottom_right $bottom_left;
+  -khtml-border-radius: $top_left $top_right $bottom_right $bottom_left;
+  -moz-border-radius: $top_left $top_right $bottom_right $bottom_left;
+  border-radius: $top_left $top_right $bottom_right $bottom_left;
+}
+
+
+// border-top-left-radius
+@mixin border-top-left-radius($value : $default-border-radius-top-left){
+  -webkit-border-top-left-radius: $value;
+  -khtml-border-top-left-radius: $value;
+  -moz-border-top-left-radius: $value;
+  border-top-left-radius: $value;
+}
+
+
+// border-top-right-radius
+@mixin border-top-right-radius($value : $default-border-radius-top-right){
+  -webkit-border-top-right-radius: $value;
+  -khtml-border-top-right-radius: $value;
+  -moz-border-top-right-radius: $value;
+  border-top-right-radius: $value;
+}
+
+
+// border-bottom-right-radius
+@mixin border-bottom-right-radius($value : $default-border-radius-bottom-left){
+  -webkit-border-bottom-right-radius: $value;
+  -khtml-border-bottom-right-radius: $value;
+  -moz-border-bottom-right-radius: $value;
+  border-bottom-right-radius: $value;
+}
+
+
+// border-bottom-left-radius
+@mixin border-bottom-left-radius($value : $default-border-radius-bottom-right){
+  -webkit-border-bottom-left-radius: $value;
+  -khtml-border-bottom-left-radius: $value;
+  -moz-border-bottom-left-radius: $value;
+  border-bottom-left-radius: $value;
+}

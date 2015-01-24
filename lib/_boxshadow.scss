@@ -1,0 +1,26 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;
+// http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+@mixin box-shadow( $shadowH : $default-box-shadow-offset-h, $shadowV : $default-box-shadow-offset-v, $blur : $default-box-shadow-blur, $spread : $default-box-shadow-spread, $color : $default-box-shadow-color, $inset : $default-box-shadow-inset ){
+
+  @if $shadowH == none {
+    -webkit-box-shadow: $shadowH;
+    -moz-box-shadow: $shadowH;
+    box-shadow: $shadowH;
+  }
+  @else {
+    -webkit-box-shadow: $shadowH $shadowV $blur $spread $color $inset;
+    -moz-box-shadow: $shadowH $shadowV $blur $spread $color $inset;
+    box-shadow: $shadowH $shadowV $blur $spread $color $inset;
+  }
+
+}

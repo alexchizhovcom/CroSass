@@ -1,0 +1,109 @@
+// ###############################################
+// CroSass - SASS Crossbrowser Library
+// Author:  Alex Chizhov
+// Verison: 0.1.2
+// Date:    24.01.2015
+// GitHub:  https://github.com/alexchizhovcom/CroSass
+// Website: http://alexchizhov.com
+// ###############################################
+
+
+// http://www.w3.org/TR/css3-animations/
+// Animation property
+// $name	      Specifies the name of the keyframe you want to bind to the selector
+// $duration	  Specifies how many seconds or milliseconds an animation takes to complete
+// $timing	    Specifies the speed curve of the animation
+// $delay	      Specifies a delay before the animation will start
+// $count	      Specifies how many times an animation should be played
+// $direction	  Specifies whether or not the animation should play in reverse on alternate cycles
+// $fill	      Specifies what values are applied by the animation outside the time it is executing
+// $state	      Specifies whether the animation is running or paused
+
+
+//  animation-name
+//  animation-duration
+//  animation-timing-function
+//  animation-iteration-count
+//  animation-direction
+//  animation-play-state
+//  animation-delay
+//  animation-fill-mode
+
+
+//<single-animation> = <single-animation-name> || <time> || <single-animation-timing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>
+
+
+
+// Shorthand Animation
+@mixin animation($name : $default-animation-name, $duration : $default-animation-duration, $timing : $default-animation-timing-function, $delay : $default-animation-delay, $count : $default-animation-iteration-count, $direction : $default-animation-direction, $fill : $default-animation-fill-mode, $state : $default-animation-play-state){
+  -webkit-animation: $name $duration $timing $delay $count $direction $fill $state;
+  -moz-animation: $name $duration $timing $delay $count $direction $fill $state;
+  -o-animation: $name $duration $timing $delay $count $direction $fill $state;
+  animation: $name $duration $timing $delay $count $direction $fill $state;
+}
+
+
+// animation-name
+@mixin animation-name($name : $default-animation-name){
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+}
+
+
+//  animation-duration
+@mixin animation-duration($duration : $default-animation-duration){
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+//  animation-timing-function
+@mixin animation-timing-function($timing : $default-animation-timing-function){
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -o-animation-timing-function: $timing;
+  animation-timing-function: $timing;
+}
+
+//  animation-iteration-count
+@mixin animation-iteration-count($count : $default-animation-iteration-count){
+  -webkit-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -o-animation-iteration-count: $count;
+  animation-iteration-count: $count;
+}
+
+//  animation-direction
+@mixin animation-direction($direction : $default-animation-direction){
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+//  animation-play-state
+@mixin animation-play-state($state : $default-animation-play-state){
+  -webkit-animation-play-state: $state;
+  -moz-animation-play-state: $state;
+  -o-animation-play-state: $state;
+  animation-play-state: $state;
+}
+
+//  animation-delay
+@mixin animation-delay($delay : $default-animation-delay){
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+//  animation-fill-mode
+@mixin animation-fill-mode($fill : $default-animation-fill-mode){
+  -webkit-animation-fill-mode: $fill;
+  -moz-animation-fill-mode: $fill;
+  -o-animation-fill-mode: $fill;
+  animation-fill-mode: $fill;
+}

@@ -1,15 +1,46 @@
 // ###############################################
 // CroSass - SASS Crossbrowser Library
 // Author:  Alex Chizhov
-// Verison: 0.1.0
-// Date:    23.01.2015
+// Verison: 0.1.2
+// Date:    24.01.2015
 // GitHub:  https://github.com/alexchizhovcom/CroSass
 // Website: http://alexchizhov.com
 // ###############################################
 
 
+// Function to remove units
+@function removeUnits($value){
 
-// parseInt function to pass an integer (remove units)
-@function parseInt($n) {
-  @return $n / ($n * 0 + 1);
+  @if type-of($value) == "number"{
+
+    @if (unitless($value)){
+      @return $value;
+    } @else if unit($value) == "em"{
+      @return $value / 1em;
+    } @else if unit($value) == "px"{
+      @return $value / 1px;
+    } @else if unit($value) == "pt"{
+      @return $value / 1pt;
+    } 
+
+  } @else {
+    @return $value;
+  }
+
+}
+
+
+
+// Converions
+@function pxtoem($px, $base:$font-size-base){
+  $px: removeUnits($px);
+  $base: removeUnits($base);
+  @return #{$px / $base}em;
+}
+
+
+@function emtopx($em, $base:$font-size-base){
+  $em: removeUnits($em);
+  $base: removeUnits($base);
+  @return #{$em * $base}px;
 }

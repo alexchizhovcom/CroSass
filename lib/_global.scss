@@ -1,8 +1,8 @@
 // ###############################################
 // CroSass - SASS Crossbrowser Library
 // Author:  Alex Chizhov
-// Verison: 0.1.0
-// Date:    23.01.2015
+// Verison: 0.1.2
+// Date:    24.01.2015
 // GitHub:  https://github.com/alexchizhovcom/CroSass
 // Website: http://alexchizhov.com
 // ###############################################
@@ -12,3 +12,34 @@
 
 // BASE font-size
 $font-size-base : 16px;
+
+// Animation
+$default-animation-name             : null;
+$default-animation-duration         : null;
+$default-animation-timing-function  : null;
+$default-animation-iteration-count  : null;
+$default-animation-direction        : null;
+$default-animation-play-state       : null;
+$default-animation-delay            : null;
+$default-animation-fill-mode        : null;
+
+
+// Border-radius
+$default-border-radius-top-left     : 0px;
+$default-border-radius-top-right    : 0px;
+$default-border-radius-bottom-left  : 0px;
+$default-border-radius-bottom-right : 0px;
+
+// Box-shadow
+$default-box-shadow-offset-h  : 0px;
+$default-box-shadow-offset-v  : 0px;
+$default-box-shadow-blur      : 5px;
+$default-box-shadow-spread    : null;
+$default-box-shadow-color     : #000;
+$default-box-shadow-inset     : null;
+
+// Box-sizing
+$default-box-sizing : border-box;
+
+// Background
+$css-pie: false;

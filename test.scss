@@ -1,0 +1,75 @@
+@import '_crosass_init';
+
+//@include css_reset;
+
+.animation{
+@include animation;
+}
+
+.appearance{
+//@include appearance(button);
+}
+
+
+.boxshadow{
+//@include box-shadow(none);
+}
+
+
+.borderbox{
+//@include box-sizing;
+}
+
+
+.borderradius{
+//@include border-radius;
+}
+
+
+.border-top-left-radius{
+//@include border-top-left-radius;
+}
+
+.border-top-right-radius{
+//@include border-top-right-radius;
+}
+
+.border-bottom-right-radius{
+//@include border-bottom-right-radius;
+}
+
+.border-bottom-left-radius{
+//@include border-bottom-left-radius;
+}
+
+
+
+.pixelstoems{
+font-size: pxtoem(25.5px);
+}
+
+.fontsize{
+@include font-size(15px);
+}
+
+.clearafter{
+color:red;
+width:100px;
+position:relative;
+@include clear-after;
+}
+
+.clearbefore{
+color:blue;
+width:200px;
+position:relative;
+@include clear-before;
+}
+
+.opacity{
+@include opacity(100);
+}
+
+.transform{
+@include transform(scale(0.9));
+}
